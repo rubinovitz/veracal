@@ -3,20 +3,15 @@ from django.db import models
 from tastypie.resources import ModelResource
 
 
-
-
 class Calendar(models.Model):
   user = models.ForeignKey(User)
-
   def to_json(self):
     d = dict(self.__dict__)
     del d['_state']
     d['tasks'] = [task.to_json() for task in self.task_set.all()]
     return d
-  
   def __unicode__(self):
     return "Personal"
-
 
 class Task(models.Model):
   calendar = models.ForeignKey(Calendar)
@@ -32,5 +27,3 @@ class Task(models.Model):
     del d['_state']
     d['date'] = str(d['date'])
     return d
-
-
