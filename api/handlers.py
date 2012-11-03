@@ -1,5 +1,6 @@
 from piston.handler import BaseHandler
 from apps.calendar.models import *
+from django.contrib.auth.models import User
 
 class CalendarHandler(BaseHandler):
     allowed_methods = ('GET', 'POST', 'PUT', 'DELETE',)
@@ -12,7 +13,7 @@ class CalendarHandler(BaseHandler):
         base = Calendar.objects
 
         if calendar_id:
-            return base.get(pk= calendar_id)
+            return base.get(pk= User.username)
 
         else:
             return base.all()  # or base.filter(...) can be used here

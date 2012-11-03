@@ -32,13 +32,8 @@
   <input type="submit" name="submit" value="Add task" class="btn primary" />
 </form>
 -->
-
-
-
-
 <form action="#" method="post" class="hidden" id="add_task">
   <h1>Create Task</h1>				
-  
     <label for="id_calendar">Calendar</label>: <select name="calendar" id="id_calendar">
 <option value="" selected="selected">---------</option>
 <option value="1">Personal</option>
@@ -49,15 +44,8 @@
     <label for="name">Name</label>: <input id="id_name" type="text" name="name" maxlength="100" />
     
     <label for="id_priority">Priority</label>: <input type="text" name="priority" id="priority" />
-    
   <input type="submit" onclick="addTask()" value="Add task" class="btn primary" />
 </form>
-
-
-
-
-
-
 <div id="app">
 </div>
 <div  class="container_12">
@@ -86,16 +74,8 @@
     </section>
   </div>
 </div>
-
-
-
 <script type="text/javascript">
-
 $(function() {
- /*
- var d = (new Date()).getDate(), m = (new Date()).getMonth()
-      , y = (new Date()).getYear();
-*/
   Date.prototype.toDateStr = function() {
     var months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", 
                   "Sept.", "Oct.", "Nov.", "Dec."]
