@@ -1,0 +1,23 @@
+{% extends "registration/registration_base.html" %}
+{%block head%}
+{% load media %}
+{% include_media "style.css" %}
+{% include_media "style1.css" %}
+{% include_media "prettyPhoto.css" %}
+{% include_media "slide.css" %}
+{% include_media "slide.js" %}
+{% include_media "jquery.js" %}
+{% include_media "jquery.prettyPhoto.js" %}
+{% include_media "swfobject.js" %}
+
+{% include_media "registration.css" %}
+{% endblock %}
+{% block title %}Register for an account{% endblock %}
+{% block content %}
+<table>
+    <form method='post' action=''>{% csrf_token %}
+        {{ form }}
+        <tr><td></td><td><input type="submit" value="Send activation email" /></td>
+    </form>
+</table>
+{% endblock %}
