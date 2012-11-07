@@ -1,5 +1,5 @@
-Important:
+Veracal
+====================
 
-To install the external libraries you must have pip installed and then do the following command:
+Cleaning up an old PennApps Django project that employs Piston and Backbone.js
 
-pip install -r requirements.txt

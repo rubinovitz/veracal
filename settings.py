@@ -219,7 +219,7 @@ EMAIL_PORT = os.environ.gAUTHENTICATION_BACKENDS = (
 
 
 LOGIN_URL = '/login-form/'
-LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_ERROR_URL = '/login-error/'
 
 ROOT_MEDIA_FILTERS = {
